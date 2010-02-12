@@ -1,0 +1,57 @@
+{* This is a comment block
+
+Use vars: {{var var_name}}
+*}<!--@subject Feil ved betaling @-->
+
+<table>
+    <thead>
+        <tr>
+            <th>Betaling fra en kunde feilet!</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <p><b>&Aring;rsak</b><br />
+                    {{var reason}}
+                </p>
+                <p>
+                    <b>Betalingsmetode</b><br />
+                    {{var checkoutType}}
+                </p>
+                <p>
+                    <b>Kunde:</b><br />
+                    <a href="mailto:{{var customerEmail}}">{{var customer}}</a> &lt;{{var customerEmail}}&gt;
+                </p>
+                <p>
+                    <b>Vare(r)</b><br />
+                    {{var items}}
+                </p>
+                <p>
+                    <b>Totalt:</b><br />
+                    {{var total}}
+                </p>
+                <p>
+                    <b>Fakturaadresse:</b><br />
+                    {{var billingAddress.format('html')}}
+                </p>
+                <p>
+                    <b>Leveringsadresse:</b><br />
+                    {{var shippingAddress.format('html')}}
+                </p>
+                <p>
+                    <b>Leveringsmetode:</b><br />
+                    {{var shippingMethod}}
+                </p>
+                <p>
+                    <b>Betalingsmetode:</b><br />
+                    {{var paymentMethod}}
+                </p>
+                <p>
+                    <b>Dato:</b><br />
+                    {{var dateAndTime}}
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
